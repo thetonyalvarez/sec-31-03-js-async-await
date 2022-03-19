@@ -1,9 +1,36 @@
 body {
 	padding: 20px;
 }
-button {
+form {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+button,
+input {
 	margin: auto;
 	display: block !important;
+	margin-bottom: 10px;
+	width: 100%;
+	max-width: 400px;
+}
+
+::-webkit-input-placeholder {
+	text-align: center;
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	text-align: center;
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	text-align: center;
+}
+
+:-ms-input-placeholder {
+	text-align: center;
 }
 #pokemon-wrapper {
 	display: flex;
@@ -30,6 +57,10 @@ button {
 }
 
 @media (max-width: 991px) {
+	button,
+	input {
+		max-width: 400px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -38,6 +69,10 @@ button {
 	}
 	#pokemon-wrapper .card {
 		width: 45%;
+	}
+	button,
+	input {
+		max-width: 100%;
 	}
 }
 
